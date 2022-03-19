@@ -5,3 +5,10 @@ C:\Users\vitor\Desktop\Calculator\Calculator\Calculator\obj\Debug\Calculator.csp
 C:\Users\vitor\Desktop\Calculator\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
 C:\Users\vitor\Desktop\Calculator\Calculator\Calculator\obj\Debug\Calculator.exe
 C:\Users\vitor\Desktop\Calculator\Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\joaov\Documents\Calculator\CSharp-Calculator\Calculator\Calculator\obj\Debug\Calculator.csproj.AssemblyReference.cache
+C:\Users\joaov\Documents\Calculator\CSharp-Calculator\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\joaov\Documents\Calculator\CSharp-Calculator\Calculator\Calculator\obj\Debug\Calculator.exe
+C:\Users\joaov\Documents\Calculator\CSharp-Calculator\Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\joaov\Documents\Calculator\CSharp-Calculator\Calculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\joaov\Documents\Calculator\CSharp-Calculator\Calculator\Calculator\bin\Debug\Calculator.exe
+C:\Users\joaov\Documents\Calculator\CSharp-Calculator\Calculator\Calculator\bin\Debug\Calculator.pdb

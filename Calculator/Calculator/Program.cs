@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Collections.Generic;
-
+using System.Text;
 
 namespace Calculator
 {
@@ -9,86 +9,81 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            List<string> validOperators = new List<string> { "+", "-", "/", "*" }
+            // Console Basic Calculator V1
 
-            Console.WriteLine("=+=+=+=+=+=+=+=+=+=+=+=+=+=+");
-            Console.WriteLine("=       Calculator         +");
-            Console.WriteLine("=+=+=+=+=+=+=+=+=+=+=+=+=+=+");
+            List<string> validOperators = new List<string> { "+", "-", "/", "*" };
 
-            Console.Write("\nWhich operation type (\"+\" \"-\" \"/\" \"*\"): ");
-            string operationType = Console.ReadLine();
+            Console.WriteLine(ShowMenu());
 
-            foreach () 
+            Console.Write("\nChoose the operation you want [\"+\", \"-\", \"/\", \"*\"]: ");
+            string calculateType = Console.ReadLine();
+
+            int indexOfCalcType = validOperators.IndexOf(calculateType);
+            if (indexOfCalcType == -1)
             {
-            
+                do
+                {
+                    Console.Clear();
+
+                    Console.WriteLine(ShowMenu());
+
+                    Console.WriteLine("\nSorry! :( \nWe can't understand what kind of operation you want.");
+                    Console.Write("\nPlease, try one of that [\"+\", \"-\", \"/\", \"*\"]:    ");
+
+                    calculateType = Console.ReadLine();
+                    indexOfCalcType = validOperators.IndexOf(calculateType);
+
+                } while (indexOfCalcType == -1);
             }
 
-            
+            Console.Write("\nFirst number: ");
+            int firstNumber = int.Parse(Console.ReadLine());
 
-            bool isValidOperator = false;
-            while (!isValidOperator)
+            Console.Write("Second number: ");
+            int secondNumber = int.Parse(Console.ReadLine());
+
+            double result = 0;
+            switch (calculateType)
             {
-                Console.Clear();
-
-                Console.WriteLine("Sorry! :( \nWe can't understand what kind of operation you want.");
-                Console.Write("\nPlease, try it again (\"+\" \"-\" \"/\" \"*\"): ");
-                operationType = Console.ReadLine();
-
-                switch (operationType) 
-                {
-                    case "+":
-                        isValidOperator = true;
-                        break;
-                    case "-":
-                        isValidOperator = true;
-                        break;
-                    case "/":
-
-                }
-                isValidOperator = operationType == "+" ? true : false;
-                isValidOperator = operationType == "-" ? true : false;
-                isValidOperator = operationType == "/" ? true : false;
-                isValidOperator = operationType == "*" ? true : false;
-
-                Console.Clear();
+                case "+":
+                    result = firstNumber + secondNumber;
+                    break;
+                case "-":
+                    result = firstNumber - secondNumber;
+                    break;
+                case "/":
+                    result = firstNumber / secondNumber;
+                    break;
+                case "*":
+                    result = firstNumber * secondNumber;
+                    break;
+                default:
+                    Console.WriteLine("We can not find your result!\nPlease try again later...");
+                    break;
             }
 
-            if (isValidOperator) {
-                Console.WriteLine("First number: ");
-                int first = int.Parse(Console.ReadLine());
-                Console.WriteLine("Second number: ");
-                int second = int.Parse(Console.ReadLine());
+            Console.Clear();
+            Console.WriteLine(ShowResult(calculateType, firstNumber, secondNumber, result));                            
+        }
 
-                double result = 0;
-                switch (operationType)
-                {
-                    case "+":
-                        result = first + second;
-                        break;
-                    case "-":
-                        result = first - second;
-                        break;
-                    case "/":
-                        result = first / second;
-                        break;
-                    case "*":
-                        result = first * second;
-                        break;
-                    default:
-                        Console.WriteLine("We can not find your result! Please try it again...");
-                        break;
-                }
+        public static string ShowMenu() 
+        {
+            StringBuilder showMenuValues = new StringBuilder();
+            showMenuValues.AppendLine("=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=");
+            showMenuValues.AppendLine("=       Calculator SELECTED MODE: \"Console\"       =");
+            showMenuValues.AppendLine("=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=");
 
-                Console.WriteLine("=+=+=+=+=+=+=+=+=+=+=+=+=+=+");
-                Console.WriteLine("=       Calculator         ");
-                Console.WriteLine("=+=+=+=+=+=+=+=+=+=+=+=+=+=+");
-                Console.WriteLine("Result:                    +");
-                Console.WriteLine("=+=+=+=+=+=+=+=+=+=+=+=+=+=+");
-                Console.WriteLine($"=\t{first} {operationType} {second} = {result}");
-                Console.WriteLine("=+=+=+=+=+=+=+=+=+=+=+=+=+=+");
-                
-            }
+            return showMenuValues.ToString();            
+        }
 
+        public static string ShowResult(string calculateType, int firstNumber, int secondNumber, double result)
+        {
+            StringBuilder showResultValues = new StringBuilder();
+            showResultValues.AppendLine(ShowMenu());
+            showResultValues.AppendLine($"The result of {firstNumber} {calculateType} {secondNumber} is: \t {result}");
+            showResultValues.AppendLine("=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=");           
+
+            return showResultValues.ToString();
         }
     }
 }
