@@ -1,7 +1,7 @@
 ﻿using System;
+using System.Text;
 using System.Globalization;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Calculator
 {
@@ -28,7 +28,7 @@ namespace Calculator
                     Console.WriteLine(ShowMenu());
 
                     Console.WriteLine("\nSorry! :( \nWe can't understand what kind of operation you want.");
-                    Console.Write("\nPlease, try one of that [\"+\", \"-\", \"/\", \"*\"]:    ");
+                    Console.Write("\nPlease use something like this: [\"+\", \"-\", \"/\", \"*\"]:    ");
 
                     calculateType = Console.ReadLine();
                     indexOfCalcType = validOperators.IndexOf(calculateType);
@@ -80,7 +80,8 @@ namespace Calculator
         {
             StringBuilder showResultValues = new StringBuilder();
             showResultValues.AppendLine(ShowMenu());
-            showResultValues.AppendLine($"The result of {firstNumber} {calculateType} {secondNumber} is: \t {result}");
+            showResultValues.AppendLine($"The result of {firstNumber} {calculateType} {secondNumber} is: " +
+                                        $"\t {result.ToString("f2", CultureInfo.InvariantCulture)}");
             showResultValues.AppendLine("=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=");           
 
             return showResultValues.ToString();
