@@ -20,3 +20,15 @@ C:\Users\joaov\Documents\Projects\CSharp-Calculator\Windows_Calculator\Calculato
 C:\Users\joaov\Documents\Projects\CSharp-Calculator\Windows_Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
 C:\Users\joaov\Documents\Projects\CSharp-Calculator\Windows_Calculator\Calculator\obj\Debug\Calculator.exe
 C:\Users\joaov\Documents\Projects\CSharp-Calculator\Windows_Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\vitor\Documents\Projects\CSharp-Calculator\Windows_Calculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\vitor\Documents\Projects\CSharp-Calculator\Windows_Calculator\Calculator\bin\Debug\Calculator.exe
+C:\Users\vitor\Documents\Projects\CSharp-Calculator\Windows_Calculator\Calculator\bin\Debug\Calculator.pdb
+C:\Users\vitor\Documents\Projects\CSharp-Calculator\Windows_Calculator\Calculator\bin\Debug\MaterialSkin.dll
+C:\Users\vitor\Documents\Projects\CSharp-Calculator\Windows_Calculator\Calculator\obj\Debug\Calculator.csproj.AssemblyReference.cache
+C:\Users\vitor\Documents\Projects\CSharp-Calculator\Windows_Calculator\Calculator\obj\Debug\Calculator.MainScreen.resources
+C:\Users\vitor\Documents\Projects\CSharp-Calculator\Windows_Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+C:\Users\vitor\Documents\Projects\CSharp-Calculator\Windows_Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
+C:\Users\vitor\Documents\Projects\CSharp-Calculator\Windows_Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\vitor\Documents\Projects\CSharp-Calculator\Windows_Calculator\Calculator\obj\Debug\Calculator.csproj.CopyComplete
+C:\Users\vitor\Documents\Projects\CSharp-Calculator\Windows_Calculator\Calculator\obj\Debug\Calculator.exe
+C:\Users\vitor\Documents\Projects\CSharp-Calculator\Windows_Calculator\Calculator\obj\Debug\Calculator.pdb
