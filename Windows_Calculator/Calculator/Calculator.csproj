@@ -49,7 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Controller\Controller.cs" />
+    <Compile Include="Entities\Dysplay.cs" />
+    <Compile Include="Entities\Entities.cs" />
+    <Compile Include="Entities\Functions.cs" />
     <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
