@@ -50,6 +50,8 @@ namespace Calculator
             this.NumberTwoButton = new System.Windows.Forms.Button();
             this.TurnOffButton = new System.Windows.Forms.Button();
             this.BackspaceButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DysplayTextBox
@@ -67,7 +69,7 @@ namespace Calculator
             // 
             // DivisionButton
             // 
-            this.DivisionButton.Location = new System.Drawing.Point(25, 167);
+            this.DivisionButton.Location = new System.Drawing.Point(25, 258);
             this.DivisionButton.Name = "DivisionButton";
             this.DivisionButton.Size = new System.Drawing.Size(75, 49);
             this.DivisionButton.TabIndex = 1;
@@ -76,7 +78,7 @@ namespace Calculator
             // 
             // MultiplyButton
             // 
-            this.MultiplyButton.Location = new System.Drawing.Point(106, 167);
+            this.MultiplyButton.Location = new System.Drawing.Point(106, 258);
             this.MultiplyButton.Name = "MultiplyButton";
             this.MultiplyButton.Size = new System.Drawing.Size(75, 49);
             this.MultiplyButton.TabIndex = 2;
@@ -85,7 +87,7 @@ namespace Calculator
             // 
             // SubtractButton
             // 
-            this.SubtractButton.Location = new System.Drawing.Point(187, 167);
+            this.SubtractButton.Location = new System.Drawing.Point(187, 258);
             this.SubtractButton.Name = "SubtractButton";
             this.SubtractButton.Size = new System.Drawing.Size(75, 49);
             this.SubtractButton.TabIndex = 3;
@@ -94,25 +96,25 @@ namespace Calculator
             // 
             // PlusButton
             // 
-            this.PlusButton.Location = new System.Drawing.Point(268, 222);
+            this.PlusButton.Location = new System.Drawing.Point(268, 258);
             this.PlusButton.Name = "PlusButton";
-            this.PlusButton.Size = new System.Drawing.Size(75, 92);
+            this.PlusButton.Size = new System.Drawing.Size(75, 124);
             this.PlusButton.TabIndex = 4;
             this.PlusButton.Text = "+";
             this.PlusButton.UseVisualStyleBackColor = true;
             // 
             // EnterButton
             // 
-            this.EnterButton.Location = new System.Drawing.Point(268, 320);
+            this.EnterButton.Location = new System.Drawing.Point(268, 388);
             this.EnterButton.Name = "EnterButton";
-            this.EnterButton.Size = new System.Drawing.Size(75, 134);
+            this.EnterButton.Size = new System.Drawing.Size(75, 158);
             this.EnterButton.TabIndex = 5;
             this.EnterButton.Text = "Enter";
             this.EnterButton.UseVisualStyleBackColor = true;
             // 
             // NumberZeroButton
             // 
-            this.NumberZeroButton.Location = new System.Drawing.Point(25, 394);
+            this.NumberZeroButton.Location = new System.Drawing.Point(25, 486);
             this.NumberZeroButton.Name = "NumberZeroButton";
             this.NumberZeroButton.Size = new System.Drawing.Size(156, 60);
             this.NumberZeroButton.TabIndex = 17;
@@ -122,7 +124,7 @@ namespace Calculator
             // 
             // PointButton
             // 
-            this.PointButton.Location = new System.Drawing.Point(187, 394);
+            this.PointButton.Location = new System.Drawing.Point(187, 486);
             this.PointButton.Name = "PointButton";
             this.PointButton.Size = new System.Drawing.Size(75, 60);
             this.PointButton.TabIndex = 18;
@@ -131,9 +133,9 @@ namespace Calculator
             // 
             // ClearButton
             // 
-            this.ClearButton.Location = new System.Drawing.Point(268, 118);
+            this.ClearButton.Location = new System.Drawing.Point(187, 197);
             this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(75, 21);
+            this.ClearButton.Size = new System.Drawing.Size(75, 46);
             this.ClearButton.TabIndex = 19;
             this.ClearButton.Text = "Clear";
             this.ClearButton.UseVisualStyleBackColor = true;
@@ -141,7 +143,7 @@ namespace Calculator
             // 
             // NumberSevenButton
             // 
-            this.NumberSevenButton.Location = new System.Drawing.Point(25, 222);
+            this.NumberSevenButton.Location = new System.Drawing.Point(25, 321);
             this.NumberSevenButton.Name = "NumberSevenButton";
             this.NumberSevenButton.Size = new System.Drawing.Size(75, 49);
             this.NumberSevenButton.TabIndex = 22;
@@ -151,7 +153,7 @@ namespace Calculator
             // 
             // NumberNineButton
             // 
-            this.NumberNineButton.Location = new System.Drawing.Point(187, 222);
+            this.NumberNineButton.Location = new System.Drawing.Point(187, 321);
             this.NumberNineButton.Name = "NumberNineButton";
             this.NumberNineButton.Size = new System.Drawing.Size(75, 49);
             this.NumberNineButton.TabIndex = 21;
@@ -161,7 +163,7 @@ namespace Calculator
             // 
             // NumberEightButton
             // 
-            this.NumberEightButton.Location = new System.Drawing.Point(106, 222);
+            this.NumberEightButton.Location = new System.Drawing.Point(106, 321);
             this.NumberEightButton.Name = "NumberEightButton";
             this.NumberEightButton.Size = new System.Drawing.Size(75, 49);
             this.NumberEightButton.TabIndex = 20;
@@ -171,7 +173,7 @@ namespace Calculator
             // 
             // NumberFourButton
             // 
-            this.NumberFourButton.Location = new System.Drawing.Point(25, 277);
+            this.NumberFourButton.Location = new System.Drawing.Point(25, 376);
             this.NumberFourButton.Name = "NumberFourButton";
             this.NumberFourButton.Size = new System.Drawing.Size(75, 49);
             this.NumberFourButton.TabIndex = 25;
@@ -181,7 +183,7 @@ namespace Calculator
             // 
             // NumberSixButton
             // 
-            this.NumberSixButton.Location = new System.Drawing.Point(187, 277);
+            this.NumberSixButton.Location = new System.Drawing.Point(187, 376);
             this.NumberSixButton.Name = "NumberSixButton";
             this.NumberSixButton.Size = new System.Drawing.Size(75, 49);
             this.NumberSixButton.TabIndex = 24;
@@ -191,7 +193,7 @@ namespace Calculator
             // 
             // NumberFiveButton
             // 
-            this.NumberFiveButton.Location = new System.Drawing.Point(106, 277);
+            this.NumberFiveButton.Location = new System.Drawing.Point(106, 376);
             this.NumberFiveButton.Name = "NumberFiveButton";
             this.NumberFiveButton.Size = new System.Drawing.Size(75, 49);
             this.NumberFiveButton.TabIndex = 23;
@@ -201,17 +203,17 @@ namespace Calculator
             // 
             // NumberOneButton
             // 
-            this.NumberOneButton.Location = new System.Drawing.Point(25, 332);
+            this.NumberOneButton.Location = new System.Drawing.Point(25, 431);
             this.NumberOneButton.Name = "NumberOneButton";
             this.NumberOneButton.Size = new System.Drawing.Size(75, 49);
             this.NumberOneButton.TabIndex = 28;
             this.NumberOneButton.Text = "1";
             this.NumberOneButton.UseVisualStyleBackColor = true;
-            this.NumberOneButton.Click += new System.EventHandler(this.NumberOneButton_Click);           
+            this.NumberOneButton.Click += new System.EventHandler(this.NumberOneButton_Click);
             // 
             // NumberThreeButton
             // 
-            this.NumberThreeButton.Location = new System.Drawing.Point(187, 332);
+            this.NumberThreeButton.Location = new System.Drawing.Point(187, 431);
             this.NumberThreeButton.Name = "NumberThreeButton";
             this.NumberThreeButton.Size = new System.Drawing.Size(75, 49);
             this.NumberThreeButton.TabIndex = 27;
@@ -221,7 +223,7 @@ namespace Calculator
             // 
             // NumberTwoButton
             // 
-            this.NumberTwoButton.Location = new System.Drawing.Point(106, 332);
+            this.NumberTwoButton.Location = new System.Drawing.Point(106, 431);
             this.NumberTwoButton.Name = "NumberTwoButton";
             this.NumberTwoButton.Size = new System.Drawing.Size(75, 49);
             this.NumberTwoButton.TabIndex = 26;
@@ -231,7 +233,7 @@ namespace Calculator
             // 
             // TurnOffButton
             // 
-            this.TurnOffButton.Location = new System.Drawing.Point(25, 118);
+            this.TurnOffButton.Location = new System.Drawing.Point(12, 95);
             this.TurnOffButton.Name = "TurnOffButton";
             this.TurnOffButton.Size = new System.Drawing.Size(75, 21);
             this.TurnOffButton.TabIndex = 29;
@@ -240,18 +242,38 @@ namespace Calculator
             // 
             // BackspaceButton
             // 
-            this.BackspaceButton.Location = new System.Drawing.Point(268, 167);
+            this.BackspaceButton.Location = new System.Drawing.Point(268, 197);
             this.BackspaceButton.Name = "BackspaceButton";
-            this.BackspaceButton.Size = new System.Drawing.Size(75, 49);
+            this.BackspaceButton.Size = new System.Drawing.Size(75, 46);
             this.BackspaceButton.TabIndex = 30;
             this.BackspaceButton.Text = "Bckspc";
             this.BackspaceButton.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(106, 197);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 46);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(25, 197);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 46);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "%";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 498);
+            this.ClientSize = new System.Drawing.Size(368, 558);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.BackspaceButton);
             this.Controls.Add(this.TurnOffButton);
             this.Controls.Add(this.NumberOneButton);
@@ -274,7 +296,7 @@ namespace Calculator
             this.Controls.Add(this.DysplayTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainScreen";
-            this.Text = "Calculator";         
+            this.Text = "Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,6 +324,8 @@ namespace Calculator
         private System.Windows.Forms.Button NumberTwoButton;
         private System.Windows.Forms.Button TurnOffButton;
         private System.Windows.Forms.Button BackspaceButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
