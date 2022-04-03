@@ -1,85 +1,108 @@
 ﻿using System.Windows.Forms;
-using Calculator.Entities.Functions;
-using Calculator.Entities.Views;
+using Calculator.Entities;
+using Calculator;
+using System.Collections.Generic;
 
 namespace Calculator
 {
     public partial class MainScreen : Form
     {
-        CalculatorFunctions functions = new CalculatorFunctions();
-        Dysplay dysplayItens = new Dysplay();
-
+        public string Dysplay { get; set; }
+        public List<char> ScreenItems { get; set; } = new List<char>();
+        
         public MainScreen()
         {
-            InitializeComponent();
-            DysplayTextBox.Text = dysplayItens.ToString();
+            InitializeComponent();              
+            DysplayTextBox.Text = Dysplay;
 
         }
-        
+
+        public void AddScreenItem(char item)
+        {
+            ScreenItems.Add(item);
+            Dysplay += item;
+            DysplayTextBox.Text = Dysplay;
+        }
+
+        public void RemoveLastScreenItem()
+        {
+            int lastItemIndex = ScreenItems.Count - 1;
+            if (lastItemIndex != -1)
+            {                
+                ScreenItems.Remove(ScreenItems[lastItemIndex]);
+                RemoveLastNumberOf(Dysplay);
+                DysplayTextBox.Text = Dysplay;
+            }
+        }
+
+        public string RemoveLastNumberOf(string variable) 
+        {
+            string newVariable = "";
+            if (variable.Length > 0) {
+
+                int lastItemIndex = variable.Length - 1;
+                for (int i = 0; i < lastItemIndex; i++)
+                {
+                    newVariable += variable[i];                    
+                }
+            }
+
+            return newVariable;
+        }
+
         private void NumberOneButton_Click(object sender, System.EventArgs e)
         {
-            functions.AddKeyboardInput("1");
-            dysplayItens.RefreshTextBox();
+            AddScreenItem('1');
         }
 
         private void NumberTwoButton_Click(object sender, System.EventArgs e)
         {
-            functions.AddKeyboardInput("2");
-            dysplayItens.RefreshTextBox();
+            AddScreenItem('2');
         }
 
         private void NumberThreeButton_Click(object sender, System.EventArgs e)
         {
-            functions.AddKeyboardInput("3");
-            dysplayItens.RefreshTextBox();
+            AddScreenItem('3');
         }
 
         private void NumberFourButton_Click(object sender, System.EventArgs e)
         {
-            functions.AddKeyboardInput("4");
-            dysplayItens.RefreshTextBox();
+            AddScreenItem('4');
         }
 
         private void NumberFiveButton_Click(object sender, System.EventArgs e)
         {
-            functions.AddKeyboardInput("5");
-            dysplayItens.RefreshTextBox();
+            AddScreenItem('5');
         }
 
         private void NumberSixButton_Click(object sender, System.EventArgs e)
         {
-            functions.AddKeyboardInput("6");
-            dysplayItens.RefreshTextBox();
+            AddScreenItem('6');
         }
 
         private void NumberSevenButton_Click(object sender, System.EventArgs e)
         {
-            functions.AddKeyboardInput("7");
-            dysplayItens.RefreshTextBox();
+            AddScreenItem('7');
         }
 
         private void NumberEightButton_Click(object sender, System.EventArgs e)
         {
-            functions.AddKeyboardInput("8");
-            dysplayItens.RefreshTextBox();
+            AddScreenItem('8');
         }
 
         private void NumberNineButton_Click(object sender, System.EventArgs e)
         {
-            functions.AddKeyboardInput("9");
-            dysplayItens.RefreshTextBox();
+            AddScreenItem('9');
         }
 
         private void NumberZeroButton_Click(object sender, System.EventArgs e)
         {
-            functions.AddKeyboardInput("0");
-            dysplayItens.RefreshTextBox();
+            AddScreenItem('0');
         }
 
         private void ClearButton_Click(object sender, System.EventArgs e)
         {
-            functions.ClearScreen();
-            dysplayItens.RefreshTextBox();
+            RemoveLastScreenItem();
         }       
     }
 }
