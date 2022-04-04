@@ -1,6 +1,4 @@
 ﻿using System.Windows.Forms;
-using Calculator.Entities;
-using Calculator;
 using System.Collections.Generic;
 
 namespace Calculator
@@ -12,16 +10,15 @@ namespace Calculator
         
         public MainScreen()
         {
-            InitializeComponent();              
-            DysplayTextBox.Text = Dysplay;
-
+            InitializeComponent();
+            RefreshDysplayValue();
         }
 
-        public void AddScreenItem(char item)
+        public void AddNewScreenItem(char item)
         {
             ScreenItems.Add(item);
             Dysplay += item;
-            DysplayTextBox.Text = Dysplay;
+            RefreshDysplayValue();
         }
 
         public void RemoveLastScreenItem()
@@ -30,79 +27,81 @@ namespace Calculator
             if (lastItemIndex != -1)
             {                
                 ScreenItems.Remove(ScreenItems[lastItemIndex]);
-                RemoveLastNumberOf(Dysplay);
-                DysplayTextBox.Text = Dysplay;
+                Dysplay = Dysplay.Remove(Dysplay.Length - 1);
+                RefreshDysplayValue();
             }
         }
 
-        public string RemoveLastNumberOf(string variable) 
+        public void RefreshDysplayValue() 
+        {            
+            DysplayTextBox.Text = Dysplay;
+        }
+
+        public void ClearEverything() 
         {
-            string newVariable = "";
-            if (variable.Length > 0) {
-
-                int lastItemIndex = variable.Length - 1;
-                for (int i = 0; i < lastItemIndex; i++)
-                {
-                    newVariable += variable[i];                    
-                }
-            }
-
-            return newVariable;
+            ScreenItems.Clear();
+            Dysplay = "0";
+            RefreshDysplayValue();
         }
 
         private void NumberOneButton_Click(object sender, System.EventArgs e)
         {
-            AddScreenItem('1');
+            AddNewScreenItem('1');
         }
 
         private void NumberTwoButton_Click(object sender, System.EventArgs e)
         {
-            AddScreenItem('2');
+            AddNewScreenItem('2');
         }
 
         private void NumberThreeButton_Click(object sender, System.EventArgs e)
         {
-            AddScreenItem('3');
+            AddNewScreenItem('3');
         }
 
         private void NumberFourButton_Click(object sender, System.EventArgs e)
         {
-            AddScreenItem('4');
+            AddNewScreenItem('4');
         }
 
         private void NumberFiveButton_Click(object sender, System.EventArgs e)
         {
-            AddScreenItem('5');
+            AddNewScreenItem('5');
         }
 
         private void NumberSixButton_Click(object sender, System.EventArgs e)
         {
-            AddScreenItem('6');
+            AddNewScreenItem('6');
         }
 
         private void NumberSevenButton_Click(object sender, System.EventArgs e)
         {
-            AddScreenItem('7');
+            AddNewScreenItem('7');
         }
 
         private void NumberEightButton_Click(object sender, System.EventArgs e)
         {
-            AddScreenItem('8');
+            AddNewScreenItem('8');
         }
 
         private void NumberNineButton_Click(object sender, System.EventArgs e)
         {
-            AddScreenItem('9');
+            AddNewScreenItem('9');
         }
 
         private void NumberZeroButton_Click(object sender, System.EventArgs e)
         {
-            AddScreenItem('0');
+            AddNewScreenItem('0');
         }
 
         private void ClearButton_Click(object sender, System.EventArgs e)
         {
+            ClearEverything();
+        }
+
+        private void BackspaceButton_Click(object sender, System.EventArgs e)
+        {
             RemoveLastScreenItem();
-        }       
+        }
     }
 }

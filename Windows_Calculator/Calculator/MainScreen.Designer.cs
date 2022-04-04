@@ -248,6 +248,7 @@ namespace Calculator
             this.BackspaceButton.TabIndex = 30;
             this.BackspaceButton.Text = "Bckspc";
             this.BackspaceButton.UseVisualStyleBackColor = true;
+            this.BackspaceButton.Click += new System.EventHandler(this.BackspaceButton_Click);
             // 
             // button1
             // 
