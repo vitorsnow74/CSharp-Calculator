@@ -50,19 +50,20 @@ namespace Calculator
             this.NumberTwoButton = new System.Windows.Forms.Button();
             this.TurnOffButton = new System.Windows.Forms.Button();
             this.BackspaceButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.CeButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.SecondDysplayTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // DysplayTextBox
             // 
             this.DysplayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.DysplayTextBox.Location = new System.Drawing.Point(12, 44);
+            this.DysplayTextBox.Location = new System.Drawing.Point(12, 48);
             this.DysplayTextBox.Multiline = true;
             this.DysplayTextBox.Name = "DysplayTextBox";
             this.DysplayTextBox.ReadOnly = true;
             this.DysplayTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.DysplayTextBox.Size = new System.Drawing.Size(344, 75);
+            this.DysplayTextBox.Size = new System.Drawing.Size(344, 82);
             this.DysplayTextBox.TabIndex = 0;
             this.DysplayTextBox.Text = "0";
             this.DysplayTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -75,6 +76,7 @@ namespace Calculator
             this.DivisionButton.TabIndex = 1;
             this.DivisionButton.Text = "/";
             this.DivisionButton.UseVisualStyleBackColor = true;
+            this.DivisionButton.Click += new System.EventHandler(this.DivisionButton_Click);
             // 
             // MultiplyButton
             // 
@@ -84,6 +86,7 @@ namespace Calculator
             this.MultiplyButton.TabIndex = 2;
             this.MultiplyButton.Text = "*";
             this.MultiplyButton.UseVisualStyleBackColor = true;
+            this.MultiplyButton.Click += new System.EventHandler(this.MultiplyButton_Click);
             // 
             // SubtractButton
             // 
@@ -93,6 +96,7 @@ namespace Calculator
             this.SubtractButton.TabIndex = 3;
             this.SubtractButton.Text = "-";
             this.SubtractButton.UseVisualStyleBackColor = true;
+            this.SubtractButton.Click += new System.EventHandler(this.SubtractButton_Click);
             // 
             // PlusButton
             // 
@@ -102,6 +106,7 @@ namespace Calculator
             this.PlusButton.TabIndex = 4;
             this.PlusButton.Text = "+";
             this.PlusButton.UseVisualStyleBackColor = true;
+            this.PlusButton.Click += new System.EventHandler(this.PlusButton_Click);
             // 
             // EnterButton
             // 
@@ -250,14 +255,15 @@ namespace Calculator
             this.BackspaceButton.UseVisualStyleBackColor = true;
             this.BackspaceButton.Click += new System.EventHandler(this.BackspaceButton_Click);
             // 
-            // button1
+            // CeButton
             // 
-            this.button1.Location = new System.Drawing.Point(106, 183);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 46);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "CE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CeButton.Location = new System.Drawing.Point(106, 183);
+            this.CeButton.Name = "CeButton";
+            this.CeButton.Size = new System.Drawing.Size(75, 46);
+            this.CeButton.TabIndex = 31;
+            this.CeButton.Text = "CE";
+            this.CeButton.UseVisualStyleBackColor = true;
+            this.CeButton.Click += new System.EventHandler(this.CeButton_Click);
             // 
             // button2
             // 
@@ -268,13 +274,27 @@ namespace Calculator
             this.button2.Text = "%";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // SecondDysplayTextBox
+            // 
+            this.SecondDysplayTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SecondDysplayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.SecondDysplayTextBox.Location = new System.Drawing.Point(22, 86);
+            this.SecondDysplayTextBox.Multiline = true;
+            this.SecondDysplayTextBox.Name = "SecondDysplayTextBox";
+            this.SecondDysplayTextBox.ReadOnly = true;
+            this.SecondDysplayTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.SecondDysplayTextBox.Size = new System.Drawing.Size(331, 42);
+            this.SecondDysplayTextBox.TabIndex = 33;
+            this.SecondDysplayTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(368, 546);
+            this.Controls.Add(this.SecondDysplayTextBox);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CeButton);
             this.Controls.Add(this.BackspaceButton);
             this.Controls.Add(this.TurnOffButton);
             this.Controls.Add(this.NumberOneButton);
@@ -325,8 +345,9 @@ namespace Calculator
         private System.Windows.Forms.Button NumberTwoButton;
         private System.Windows.Forms.Button TurnOffButton;
         private System.Windows.Forms.Button BackspaceButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CeButton;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox SecondDysplayTextBox;
     }
 }
 
